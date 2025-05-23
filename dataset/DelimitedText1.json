@@ -6,7 +6,7 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"relurl": {
+			"p_rel_url": {
 				"type": "String"
 			}
 		},
