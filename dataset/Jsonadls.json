@@ -14,19 +14,6 @@
 				"fileSystem": "bronze"
 			}
 		},
-		"schema": {
-			"type": "object",
-			"properties": {
-				"p_rel_url": {
-					"type": "string"
-				},
-				"p_folder": {
-					"type": "string"
-				},
-				"p_file": {
-					"type": "string"
-				}
-			}
-		}
+		"schema": {}
 	}
 }
