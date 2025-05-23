@@ -60,7 +60,7 @@
 				]
 			},
 			{
-				"name": "LookupADLS",
+				"name": "Lookup1",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -84,7 +84,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "Jsonadls",
+						"referenceName": "JsonDS",
 						"type": "DatasetReference"
 					}
 				}
