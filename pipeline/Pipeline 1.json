@@ -60,7 +60,7 @@
 				]
 			},
 			{
-				"name": "Lookupjson",
+				"name": "LookupADLS",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -86,8 +86,7 @@
 					"dataset": {
 						"referenceName": "Jsonadls",
 						"type": "DatasetReference"
-					},
-					"firstRowOnly": true
+					}
 				}
 			}
 		],
