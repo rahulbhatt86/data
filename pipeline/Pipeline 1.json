@@ -66,6 +66,10 @@
 							"typeProperties": {
 								"source": {
 									"type": "DelimitedTextSource",
+									"storeSettings": {
+										"type": "HttpReadSettings",
+										"requestMethod": "GET"
+									},
 									"formatSettings": {
 										"type": "DelimitedTextReadSettings"
 									}
@@ -91,7 +95,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "DelimitedText1",
+									"referenceName": "DelimitedText2",
 									"type": "DatasetReference",
 									"parameters": {
 										"p_rel_url": {
