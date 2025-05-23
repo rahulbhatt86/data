@@ -1,0 +1,17 @@
+{
+	"name": "01-ExternalTable",
+	"properties": {
+		"content": {
+			"query": "CREATE DATABASE appdb\n\nCreate EXTERNAL DATA Source srcActivitylog\nwith(\n    LOCATION='https://adlsdatastg.blob.core.windows.net/data'\n);\n\nCreate EXTERNAL FILE FORMAT delimitedtextfile\nWITH(\n    FORMAT_TYPE=DELIMITEDTEXT,\n    FORMAT_OPTIONS(\n        FIELD_TERMINATOR=',',\n        FIRST_ROW=2\n    )\n    );    \nCREATE EXTERNAL TABLE Activitylog\n(\n    [Correlationid] VARCHAR(200),\n    [OperationName] VARCHAR(300),\n    [Status] VARCHAR (100),\n    [Eventcatergory] varchar(100),\n    [Level] VARCHAR(100),\n    [Time] VARCHAR(100),\n    [Subscription] VARCHAR(200),\n    [Eventinitiatedby] VARCHAR(1000),\n    [Resourcetype] VARCHAR(300),\n    [Resourcegroup] VARCHAR(1000),\n    [Resource] varchar(2000)\n)\nWITH\n(\n    Location='/*.csv',\n    DATA_SOURCE=srcActivitylog,\n    file_format=delimitedtextfile\n)\n\nSelect Count(*) from Activitylog",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "appdb",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
